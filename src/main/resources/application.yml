@@ -1,0 +1,42 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: authentication-ms
+  data:
+    mongodb:
+     # uri: mongodb+srv://bassem:bassem@authentication.6mvbj9d.mongodb.net/?retryWrites=true&w=majority
+      uri : mongodb+srv://superpotato:181JMT1578@cluster0.gjrxubc.mongodb.net/?retryWrites=true&w=majority
+      database: authentication
+      auto-index-creation: true
+  main:
+    allow-circular-references: true
+  banner:
+    location : classpath:banner.txt
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka/
+  #    defaultZone: http://172.17.0.2:8761/eureka/
+
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+
+
+
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+management:
+  info:
+    env:
+      enabled: true
+
+
+
+
+
+
