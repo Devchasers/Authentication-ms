@@ -43,7 +43,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("")
+    @PostMapping("/add")
     public ResponseEntity saveUser(@RequestBody User user) {
         try{
             User newUser = userService.saveOrUpdateUser(user);
