@@ -1,11 +1,11 @@
 server:
   port: 8081
+  forward-headers-strategy: framework
 spring:
   application:
     name: authentication-ms
   data:
     mongodb:
-     # uri: mongodb+srv://bassem:bassem@authentication.6mvbj9d.mongodb.net/?retryWrites=true&w=majority
       uri : mongodb+srv://superpotato:181JMT1578@cluster0.gjrxubc.mongodb.net/?retryWrites=true&w=majority
       database: authentication
       auto-index-creation: true
@@ -35,6 +35,9 @@ management:
     env:
       enabled: true
 
+springdoc:
+  api-docs:
+    path: /docs
 
 
 
